@@ -1,0 +1,24 @@
+﻿@model LecturerClaim
+
+@{
+    ViewData["Title"] = "Create New Claim";
+}
+
+<div class="container mt-4">
+    <h1>Create New Claim</h1>
+    <form method="post">
+        <div class="mb-3">
+            <label for="LecturerName" class="form-label">Lecturer Name</label>
+            <input type="text" class="form-control" id="LecturerName" name="LecturerName" required />
+        </div>
+        <div class="mb-3">
+            <label for="HoursWorked" class="form-label">Hours Worked</label>
+            <input type="number" class="form-control" id="HoursWorked" name="HoursWorked" required />
+        </div>
+        <div class="mb-3">
+            <label for="HourlyRate" class="form-label">Hourly Rate</label>
+            <input type="number" class="form-control" id="HourlyRate" name="HourlyRate" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

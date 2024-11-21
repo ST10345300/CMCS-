@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>CMCS_</RootNamespace>
+    <Platforms>AnyCPU;ARM32</Platforms>
+    <UserSecretsId>83e85d3f-a967-4379-997c-118f8e2bdf31</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Shared\_Layout.cshtml.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="5.3.3" />
+  </ItemGroup>
+
+</Project>

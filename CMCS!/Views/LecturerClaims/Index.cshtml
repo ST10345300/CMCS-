@@ -1,0 +1,42 @@
+﻿@model IEnumerable<LecturerClaim>
+
+@{
+    ViewData["Title"] = "Lecturer Claims";
+}
+
+<div class="container mt-4">
+    <h1>Lecturer Claims</h1>
+    <div class="mb-3">
+        <a href="@Url.Action("Create", "LecturerClaims")" class="btn btn-primary">Create New Claim</a>
+    </div>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Lecturer Name</th>
+                <th>Hours Worked</th>
+                <th>Hourly Rate</th>
+                <th>Final Payment</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.LecturerName</td>
+                    <td>@claim.HoursWorked</td>
+                    <td>@claim.HourlyRate</td>
+                    <td>@claim.FinalPayment</td>
+                    <td>@claim.Status</td>
+                    <td>
+                        @if (claim.Status == "Pending")
+                        {
+                            <a href="@Url.Action("Approve", "LecturerClaims", new { id = claim.Id })" class="btn btn-success">Approve</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
