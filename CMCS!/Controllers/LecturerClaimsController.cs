@@ -10,7 +10,9 @@ namespace CMCS_.Controllers
     {
         private static List<LecturerClaim> Claims = new List<LecturerClaim>
     {
-        new LecturerClaim { Id = 1, LecturerName = "John Doe", HoursWorked = 30, HourlyRate = 25.00M, FinalPayment = 600.00M, Status = "Pending" }
+        new() { Id = 1, LecturerName = "John Doe", HoursWorked = 30, HourlyRate = 25.00M, FinalPayment = 600.00M, Status = "Pending"
+        },
+        new() { Id = 1, LecturerName = "mike ross", HoursWorked = 40, HourlyRate = 40.00M, FinalPayment = 600.00M, Status = "Pending" }
     };
 
         public IActionResult Index()
